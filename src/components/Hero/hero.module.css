@@ -1,0 +1,23 @@
+@keyframes slimeWobble {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    border-radius: 10% 30% 50% 70% / 20% 40% 60% 80%;
+  }
+  25% {
+    transform: scale(1.1, 0.9) rotate(-3deg);
+    border-radius: 30% 50% 70% 90% / 40% 60% 80% 100%;
+  }
+  50% {
+    transform: scale(0.9, 1.1) rotate(3deg);
+    border-radius: 50% 70% 90% 10% / 60% 80% 100% 20%;
+  }
+  75% {
+    transform: scale(1.05, 0.95) rotate(-1.5deg);
+    border-radius: 70% 90% 10% 30% / 80% 100% 20% 40%;
+  }
+}
+
+
+.slimeWobble {
+  animation: slimeWobble 2s infinite;
+}
