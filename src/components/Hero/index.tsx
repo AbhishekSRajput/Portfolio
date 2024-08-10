@@ -1,31 +1,25 @@
 import { Github, Linkedin, SendHorizontal } from "lucide-react";
 import React from "react";
 import { Button } from "../ui/button";
+import { TextGenerateEffect } from "../TextGenerateEffect";
 
 const Hero = () => {
 	return (
 		<section className='container mx-auto py-32 max-w-3xl' id='home'>
 			<div className=' p-8 rounded-lg shadow-lg'>
 				<div>
-					<h1 className='text-4xl font-bold mb-4'>
-						<small className='block text-lg font-light'>
-							Hi I&apos;m
-						</small>
-						Abhishek Singh
-					</h1>
-					<p className='mb-8'>
-						<span>
-							Versatile Software Engineer specializing in frontend
-							and backend development with Node.js.
-						</span>
-						<span>
-							I create efficient web applications using HTML, CSS,
-							JavaScript, and modern frameworks. Passionate about
-							building scalable solutions and continuously
-							learning new technologies.
-						</span>
+					<p className='uppercase tracking-widest text-xs text-center dark:text-blue-100'>
+						Crafting Interactive Web Experiences with ReactJS
 					</p>
-					<div className='call-to-action flex flex-col space-y-4 mb-8 sm:flex-row sm:space-x-4 sm:space-y-0'>
+					<TextGenerateEffect
+						words='Turning Ideas into Flawless Digital Experiences'
+						className='text-center'
+					/>
+					<p className='text-center md:tracking-wider mt-2 mb-4 text-sm md:text-lg lg:text-2xl'>
+						Hi! I&apos;m Abhishek, Software Developer. based in
+						India.
+					</p>
+					<div className='mt-12 call-to-action flex justify-center items-center flex-col space-y-4 mb-8 sm:flex-row sm:space-x-4 sm:space-y-0'>
 						<Button size='lg' variant='default'>
 							<a
 								href='/path/to/your/resume.pdf'
@@ -43,7 +37,7 @@ const Hero = () => {
 							</a>
 						</Button>
 					</div>
-					<div className='social-links flex space-x-4'>
+					<div className='social-links flex justify-center space-x-4'>
 						<a
 							href='https://github.com/yourusername'
 							target='_blank'

@@ -38,7 +38,7 @@ const DropDownNavMenu = () => {
 const Navbar = () => {
 	return (
 		<>
-			<header className='p-4 fixed w-full top-0 bg-background text-foreground shadow-sm'>
+			<header className='p-4 fixed z-30 w-full top-0 bg-background text-foreground shadow-sm'>
 				<nav className='container mx-auto flex justify-between items-center'>
 					<a href='#home' className=' space-x-1'>
 						<span className='text-xl font-bold'>Portfolio</span>
