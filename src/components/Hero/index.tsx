@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 const Hero = () => {
 	return (
-		<section className='container mx-auto py-20 max-w-3xl' id='home'>
+		<section className='container mx-auto py-32 max-w-3xl' id='home'>
 			<div className=' p-8 rounded-lg shadow-lg'>
 				<div>
 					<h1 className='text-4xl font-bold mb-4'>
