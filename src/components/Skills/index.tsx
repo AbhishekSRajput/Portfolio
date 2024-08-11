@@ -21,19 +21,17 @@ import { FileBadge, Settings } from "lucide-react";
 const Skills = () => {
 	return (
 		<section
-			style={{ height: "1000px" }}
 			className='pt-16 flex justify-center items-center '
-			id='about'
+			id='skills'
 		>
-			<AnimatedBackground />
 			<div className='container'>
 				<div className='flex justify-center flex-wrap'>
 					<div className='py-3 backdrop-blur-sm'>
-						<h3 className='flex justify-center space-x-2 mb-7 text-xl md:text-3xl lg:text-4xl font-bold'>
+						<h3 className='flex justify-center space-x-2 mb-7 text-xl md:text-3xl lg:text-4xl'>
 							<Settings />
 							<span>Skills</span>
 						</h3>
-						<ul className='text-base md:text-lg lg:text-xl font-medium max-w-xl mx-auto list-disc'>
+						<ul className='text-base md:text-lg lg:text-xl font-light max-w-lg mx-auto list-disc'>
 							<li>
 								Versatile Software Engineer specializing in
 								frontend ReactJS and backend development with
@@ -50,11 +48,11 @@ const Skills = () => {
 						</ul>
 					</div>
 					<div className='p-3 backdrop-blur-sm'>
-						<h3 className='flex justify-center space-x-2 mb-7 text-xl md:text-3xl lg:text-4xl font-bold'>
+						<h3 className='flex justify-center space-x-2 mb-7 text-xl md:text-3xl lg:text-4xl'>
 							<FileBadge />
 							<span>Achievements</span>
 						</h3>
-						<ul className='text-base md:text-lg lg:text-xl font-medium max-w-xl mx-auto list-disc'>
+						<ul className='text-base md:text-lg lg:text-xl font-light max-w-lg mx-auto list-disc'>
 							<li>
 								Refactored multiple files containing thousands
 								of lines of code.
@@ -74,14 +72,14 @@ const Skills = () => {
 						</ul>
 					</div>
 				</div>
-				<div className='flex p-16 justify-center'>
+				<div className='flex justify-center'>
 					<div className='flex flex-wrap'>
 						<span className='p-2'>
 							<Image
 								src={js}
 								alt='card'
-								width={64}
-								height={64}
+								width={37}
+								height={37}
 								className='rounded-xl'
 							/>
 						</span>
@@ -89,8 +87,8 @@ const Skills = () => {
 							<Image
 								src={css}
 								alt='css'
-								width={64}
-								height={64}
+								width={37}
+								height={37}
 								className='rounded-xl'
 							/>
 						</span>
@@ -98,8 +96,8 @@ const Skills = () => {
 							<Image
 								src={html}
 								alt='html'
-								width={64}
-								height={64}
+								width={37}
+								height={37}
 								className='rounded-xl'
 							/>
 						</span>
@@ -107,8 +105,8 @@ const Skills = () => {
 							<Image
 								src={nextjs}
 								alt='nextjs'
-								width={64}
-								height={64}
+								width={37}
+								height={37}
 								className='rounded-xl'
 							/>
 						</span>
@@ -116,8 +114,8 @@ const Skills = () => {
 							<Image
 								src={tailwind}
 								alt='tailwind'
-								width={64}
-								height={64}
+								width={37}
+								height={37}
 								className='rounded-xl'
 							/>
 						</span>
@@ -125,8 +123,8 @@ const Skills = () => {
 							<Image
 								src={redux}
 								alt='redux'
-								width={64}
-								height={64}
+								width={37}
+								height={37}
 								className='rounded-xl'
 							/>
 						</span>
@@ -134,8 +132,8 @@ const Skills = () => {
 							<Image
 								src={nodejs}
 								alt='nodejs'
-								width={64}
-								height={64}
+								width={37}
+								height={37}
 								className='rounded-xl'
 							/>
 						</span>
@@ -143,8 +141,8 @@ const Skills = () => {
 							<Image
 								src={nestjs}
 								alt='nestjs'
-								width={64}
-								height={64}
+								width={37}
+								height={37}
 								className='rounded-xl'
 							/>
 						</span>
@@ -152,8 +150,8 @@ const Skills = () => {
 							<Image
 								src={docker}
 								alt='docker'
-								width={64}
-								height={64}
+								width={37}
+								height={37}
 								className='rounded-xl'
 							/>
 						</span>
@@ -161,8 +159,8 @@ const Skills = () => {
 							<Image
 								src={mongodb}
 								alt='mongodb'
-								width={64}
-								height={64}
+								width={37}
+								height={37}
 								className='rounded-xl'
 							/>
 						</span>
@@ -170,8 +168,8 @@ const Skills = () => {
 							<Image
 								src={postgresql}
 								alt='postgresql'
-								width={64}
-								height={64}
+								width={37}
+								height={37}
 								className='rounded-xl'
 							/>
 						</span>
@@ -179,8 +177,8 @@ const Skills = () => {
 							<Image
 								src={github}
 								alt='github'
-								width={64}
-								height={64}
+								width={37}
+								height={37}
 								className='rounded-xl'
 							/>
 						</span>
