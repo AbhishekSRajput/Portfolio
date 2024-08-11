@@ -3,8 +3,7 @@ import Hero from "@/components/Hero";
 import React from "react";
 import InfiniteScroll from "@/components/InfiniteScroll";
 import Skills from "@/components/Skills";
-import Image from "next/image";
-import js from "../../public/techIcons/js.svg";
+import Projects from "@/components/Projects";
 
 const AppPage = () => {
 	return (
@@ -12,6 +11,7 @@ const AppPage = () => {
 			<Hero />
 			<InfiniteScroll />
 			<Skills />
+			<Projects />
 			<div className='pt-16' id='contact' style={{ height: "1000px" }}>
 				contact
 			</div>
