@@ -39,7 +39,7 @@ const Hero = () => {
 					</div>
 					<div className='social-links flex justify-center space-x-4'>
 						<a
-							href='https://github.com/yourusername'
+							href='https://github.com/AbhishekSRajput'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
@@ -48,7 +48,7 @@ const Hero = () => {
 							</Button>
 						</a>
 						<a
-							href='https://www.linkedin.com/in/yourprofile'
+							href='https://www.linkedin.com/in/abhisheksrajput3/'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
