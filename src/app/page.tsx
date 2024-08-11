@@ -4,6 +4,7 @@ import React from "react";
 import InfiniteScroll from "@/components/InfiniteScroll";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Blogs from "@/components/Blogs";
 
 const AppPage = () => {
 	return (
@@ -12,9 +13,7 @@ const AppPage = () => {
 			<InfiniteScroll />
 			<Skills />
 			<Projects />
-			<div className='pt-16' id='contact' style={{ height: "1000px" }}>
-				contact
-			</div>
+			<Blogs />
 		</>
 	);
 };
