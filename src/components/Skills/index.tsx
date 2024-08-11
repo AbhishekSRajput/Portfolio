@@ -20,11 +20,9 @@ import { FileBadge, Settings } from "lucide-react";
 
 const Skills = () => {
 	return (
-		<section
-			className='mt-44 border flex justify-center items-center '
-			id='skills'
-		>
-			<div className='container'>
+		<section id='about' className='pt-44 flex justify-center items-center '>
+			<div className='container border'>
+				<h2 className='p-4 text-4xl lg:text-5xl text-center'>About</h2>
 				<div className='flex justify-center flex-wrap'>
 					<div className='p-7 border backdrop-blur-sm'>
 						<h3 className='flex justify-center space-x-2 mb-7 text-3xl lg:text-4xl'>
