@@ -21,17 +21,17 @@ import { FileBadge, Settings } from "lucide-react";
 const Skills = () => {
 	return (
 		<section
-			className='pt-16 flex justify-center items-center '
+			className='mt-44 border flex justify-center items-center '
 			id='skills'
 		>
 			<div className='container'>
 				<div className='flex justify-center flex-wrap'>
-					<div className='py-3 backdrop-blur-sm'>
-						<h3 className='flex justify-center space-x-2 mb-7 text-xl md:text-3xl lg:text-4xl'>
+					<div className='p-7 border backdrop-blur-sm'>
+						<h3 className='flex justify-center space-x-2 mb-7 text-3xl lg:text-4xl'>
 							<Settings />
 							<span>Skills</span>
 						</h3>
-						<ul className='text-base md:text-lg lg:text-xl font-light max-w-lg mx-auto list-disc'>
+						<ul className='text-base md:text-md lg:text-lg font-light max-w-lg mx-auto list-disc'>
 							<li>
 								Versatile Software Engineer specializing in
 								frontend ReactJS and backend development with
@@ -47,12 +47,12 @@ const Skills = () => {
 							</li>
 						</ul>
 					</div>
-					<div className='p-3 backdrop-blur-sm'>
-						<h3 className='flex justify-center space-x-2 mb-7 text-xl md:text-3xl lg:text-4xl'>
+					<div className='p-7 border backdrop-blur-sm'>
+						<h3 className='flex justify-center space-x-2 mb-7 text-3xl lg:text-4xl'>
 							<FileBadge />
 							<span>Achievements</span>
 						</h3>
-						<ul className='text-base md:text-lg lg:text-xl font-light max-w-lg mx-auto list-disc'>
+						<ul className='text-base md:text-md lg:text-lg font-light max-w-lg mx-auto list-disc'>
 							<li>
 								Refactored multiple files containing thousands
 								of lines of code.
