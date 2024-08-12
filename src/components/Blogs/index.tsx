@@ -4,10 +4,10 @@ import { PinContainer } from "@/components/3DPin";
 
 export default function Blogs() {
 	return (
-		<section id='blogs'>
+		<section id='blogs' className=''>
 			<h2 className='p-7 text-4xl lg:text-5xl text-center'>Blogs</h2>
-			<div className='flex justify-center flex-wrap'>
-				<div className='h-full p-2 flex items-center justify-center '>
+			<div className='flex justify-center flex-wrap mb-20'>
+				<div className='h-full py-9 flex items-center justify-center '>
 					<PinContainer
 						title='/dev.to/abhisheksrajput'
 						href='https://dev.to/abhisheksrajput/setup-nextjs-with-typescript-eslint-prettier-and-husky-49lb'
@@ -26,7 +26,7 @@ export default function Blogs() {
 						</div>
 					</PinContainer>
 				</div>
-				<div className='h-full p-2 flex items-center justify-center '>
+				<div className='h-full py-9 flex items-center justify-center '>
 					<PinContainer
 						title='/dev.to/abhisheksrajput'
 						href='https://dev.to/abhisheksrajput/can-you-solve-these-javascript-mind-twister-puzzles-by-chatgpt-58cf'
