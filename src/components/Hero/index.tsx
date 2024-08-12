@@ -8,22 +8,24 @@ const Hero = () => {
 		<section className='container mx-auto py-32 max-w-3xl' id='home'>
 			<div className=' p-8 rounded-lg shadow-lg'>
 				<div>
-					<p className='uppercase tracking-widest text-xs text-center dark:text-blue-100'>
+					<p className='uppercase tracking-wide text-[9px] md:text-[10px] lg:text-[12px] text-center'>
 						Crafting Interactive Web Experiences with ReactJS
 					</p>
 					<TextGenerateEffect
 						words='Turning Ideas into Flawless Digital Experiences'
 						className='text-center'
 					/>
-					<p className='text-center md:tracking-wider mt-2 mb-4 text-sm md:text-lg lg:text-2xl'>
+					<p className='text-center md:tracking-wider mt-2 mb-4 text-sm md:text-md lg:text-lg'>
 						Hi! I&apos;m Abhishek, Software Developer. based in
 						India.
 					</p>
 					<div className='mt-12 call-to-action flex justify-center items-center flex-col space-y-4 mb-8 sm:flex-row sm:space-x-4 sm:space-y-0'>
 						<Button size='lg' variant='default'>
 							<a
-								href='/path/to/your/resume.pdf'
+								href='/Resume_Abhishek_Singh.pdf'
 								className='py-2 px-2 text-lg '
+								target='_blank'
+								rel='noopener noreferrer'
 							>
 								View Resume
 							</a>

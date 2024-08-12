@@ -31,7 +31,7 @@ const DropDownNavMenu = () => {
 					<a href='#projects'>Projects</a>
 				</DropdownMenuItem>
 				<DropdownMenuItem>
-					<a href='#blog'>Blog</a>
+					<a href='#blogs'>Blogs</a>
 				</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>

@@ -25,7 +25,7 @@ const AgencyLandingPage = () => {
 						Vaccination Center Finder is a web application that
 						helps users to find the nearest vaccination center.
 					</p>
-					<div className='flex space-x-4 mb-6'>
+					<div className='flex flex-wrap space-x-4 mb-6'>
 						<span className='p-2'>
 							<Image
 								src={tailwind}
@@ -74,7 +74,13 @@ const AgencyLandingPage = () => {
 							width={14}
 							alt='github'
 						/>
-						<span>View Live Project</span>
+						<a
+							href='https://vaccinationcenter.vercel.app/'
+							target='_blank'
+							rel='noreferrer'
+						>
+							View Live Project
+						</a>
 					</Button>
 				</div>
 				<div className='lg:w-1/2 p-7 h-full'>
@@ -90,7 +96,7 @@ const AgencyLandingPage = () => {
 						Project On Going Where I am working on the project
 						Thakur releasing soon.
 					</p>
-					<div className='flex space-x-4 mb-6'>
+					<div className='flex flex-wrap space-x-4 mb-6'>
 						<span className='p-2'>
 							<Image
 								src={tailwind}
