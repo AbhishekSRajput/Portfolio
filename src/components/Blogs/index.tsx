@@ -1,52 +1,83 @@
 "use client";
-import React from "react";
-import { PinContainer } from "@/components/3DPin";
 
-export default function Blogs() {
+// import { FaLocationArrow } from "react-icons/fa6";
+import { Send } from "lucide-react";
+import { blogs } from "@/data";
+import { PinContainer } from "@/components/3DPin";
+import { TextGenerateEffect } from "../TextGenerateEffect";
+import { cn } from "@/lib/utils";
+
+const Blogs = () => {
 	return (
-		<section id='blogs' className=''>
-			<h2 className='p-7 text-4xl lg:text-5xl text-center'>Blogs</h2>
-			<div className='flex justify-center flex-wrap mb-20'>
-				<div className='h-full py-9 flex items-center justify-center '>
-					<PinContainer
-						title='/dev.to/abhisheksrajput'
-						href='https://dev.to/abhisheksrajput/setup-nextjs-with-typescript-eslint-prettier-and-husky-49lb'
+		<div id='blogs' className='py-16'>
+			<TextGenerateEffect
+				words='My Blogs'
+				className='text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'
+			/>
+			<div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-10'>
+				{blogs.map((item) => (
+					<div
+						className='lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]'
+						key={item.id}
 					>
-						<div className='flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] '>
-							<h3 className='max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100'>
-								Setup NextJS with typescript, EsLint, prettier
-								and husky
-							</h3>
-							<div className='text-base !m-0 !p-0 font-normal'>
-								<span className='text-slate-500 '>
-									Customizable EsLint and NextJS.
-								</span>
+						<PinContainer title={item.title}>
+							<div className='relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10'>
+								
 							</div>
-							<div className='flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500' />
-						</div>
-					</PinContainer>
-				</div>
-				<div className='h-full py-9 flex items-center justify-center '>
-					<PinContainer
-						title='/dev.to/abhisheksrajput'
-						href='https://dev.to/abhisheksrajput/can-you-solve-these-javascript-mind-twister-puzzles-by-chatgpt-58cf'
-					>
-						<div className='flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] '>
-							<h3 className='max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100'>
-								Can you solve these Javascript Mind Twister
-								Puzzles by ChatGPT?
-							</h3>
-							<div className='text-base !m-0 !p-0 font-normal'>
-								<span className='text-slate-500 '>
-									Solve these puzzles and improve your problem
-									solving skills.
-								</span>
+
+							<p
+								className='lg:text-xl lg:font-normal font-light text-sm line-clamp-2 dark:text-white text-black'
+								style={{
+									margin: "1vh 0",
+								}}
+							>
+								{item.des}
+							</p>
+
+							<div className='flex items-center justify-between mt-7 mb-3'>
+								<div className='flex items-center'>
+									{item.iconLists.map((icon, index) => (
+										<div
+											key={index}
+											className='border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center'
+											style={{
+												transform: `translateX(-${
+													5 * index + 2
+												}px)`,
+											}}
+										>
+											<img
+												src={icon}
+												alt='icon5'
+												className='p-2'
+											/>
+										</div>
+									))}
+								</div>
+
+								<a
+									className={cn(
+										item.link
+											? ""
+											: "pointer-events-none opacity-20",
+										"flex justify-center items-center"
+									)}
+									href=''
+								>
+									<div className='flex justify-center items-center'>
+										<p className='flex lg:text-xl md:text-xs text-sm text-purple'>
+											Check Live Site
+										</p>
+										<Send className='ms-3' />
+									</div>
+								</a>
 							</div>
-							<div className='flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500' />
-						</div>
-					</PinContainer>
-				</div>
+						</PinContainer>
+					</div>
+				))}
 			</div>
-		</section>
+		</div>
 	);
-}
+};
+
+export default Blogs;

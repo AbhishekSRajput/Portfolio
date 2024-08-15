@@ -88,6 +88,27 @@ export const projects = [
   }
 ];
 
+export const blogs = [
+  {
+    id: 1,
+    author: "Abhishek Singh",
+    title: "dev.to/abhisheksrajput",
+    des: "Can you solve these Javascript Mind Twister Puzzles by ChatGPT? 🤯",
+    img: "/blogs/devto.png",
+    iconLists: ["techIcons/js.svg"],
+    link: "https://dev.to/abhisheksrajput/can-you-solve-these-javascript-mind-twister-puzzles-by-chatgpt-58cf",
+  },
+  {
+    id: 2,
+    author: "Abhishek Singh",
+    title: "dev.to/abhisheksrajput",
+    des: "Setup NextJS with typescript, EsLint, prettier and husky",
+    img: "/blogs/devto.png",
+    iconLists: ["next.svg", "ts.svg"],
+    link: "https://dev.to/abhisheksrajput/can-you-solve-these-javascript-mind-twister-puzzles-by-chatgpt-58cf ",
+  }
+];
+
 export const testimonials = [
   {
     quote:

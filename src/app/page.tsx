@@ -4,6 +4,7 @@ import InfiniteScroll from "@/components/InfiniteScroll";
 import Grid from "@/components/Grid";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
+import Blogs2 from "@/components/Blogs2";
 
 const AppPage = () => {
 	return (
@@ -11,8 +12,9 @@ const AppPage = () => {
 			<Hero />
 			<InfiniteScroll />
 			<Grid />
-			<Projects />
 			<Experience />
+			<Projects />
+			<Blogs2 />
 		</>
 	);
 };
