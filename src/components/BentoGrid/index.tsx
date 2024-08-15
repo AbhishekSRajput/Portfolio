@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import { Copy } from "lucide-react";
 
@@ -37,7 +38,6 @@ export const BentoGridItem = ({
 	id,
 	title,
 	description,
-	//   remove unecessary things here
 	img,
 	imgClassName,
 	titleClassName,

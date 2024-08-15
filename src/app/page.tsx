@@ -1,10 +1,9 @@
-import { Button } from "@/components/ui/button";
 import Hero from "@/components/Hero";
 import React from "react";
 import InfiniteScroll from "@/components/InfiniteScroll";
-import Blogs from "@/components/Blogs";
 import Grid from "@/components/Grid";
 import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
 
 const AppPage = () => {
 	return (
@@ -13,6 +12,7 @@ const AppPage = () => {
 			<InfiniteScroll />
 			<Grid />
 			<Projects />
+			<Experience />
 		</>
 	);
 };

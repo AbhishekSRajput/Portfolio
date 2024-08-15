@@ -5,9 +5,9 @@ import { TextGenerateEffect } from "../TextGenerateEffect";
 
 const Hero = () => {
 	return (
-		<section className='container py-32' id='home'>
+		<section className='container z-9999 py-32' id='home'>
 			<div className='max-w-[89vw] mx-auto md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
-				<p className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-80'>
+				<p className='uppercase tracking-widest text-xs text-center max-w-80'>
 					Crafting Interactive Web Experiences with ReactJS
 				</p>
 				<TextGenerateEffect
@@ -20,7 +20,7 @@ const Hero = () => {
 				<div className='mt-12 call-to-action flex justify-center items-center flex-col space-y-4 mb-8 sm:flex-row sm:space-x-4 sm:space-y-0'>
 					<Button size='lg' variant='default'>
 						<a
-							href='/Resume_Abhishek_Singh.pdf'
+							href='Resume_Abhishek_Singh.pdf'
 							className='py-2 px-2 text-lg '
 							target='_blank'
 							rel='noopener noreferrer'
