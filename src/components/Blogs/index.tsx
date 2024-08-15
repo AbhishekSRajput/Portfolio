@@ -1,51 +1,60 @@
 "use client";
-import React from "react";
-import { PinContainer } from "@/components/3DPin";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { blogs } from "@/data";
+import { TextGenerateEffect } from "../TextGenerateEffect";
 
 export default function Blogs() {
 	return (
-		<section id='blogs' className=''>
-			<h2 className='p-7 text-4xl lg:text-5xl text-center'>Blogs</h2>
-			<div className='flex justify-center flex-wrap mb-20'>
-				<div className='h-full py-9 flex items-center justify-center '>
-					<PinContainer
-						title='/dev.to/abhisheksrajput'
-						href='https://dev.to/abhisheksrajput/setup-nextjs-with-typescript-eslint-prettier-and-husky-49lb'
+		<section className='py-12 px-1 '>
+			<TextGenerateEffect
+				words='Blogs'
+				className='text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'
+			/>
+			<div className='flex justify-center flex-wrap'>
+				{blogs.map((blog, i) => (
+					<a
+						href={blog.link}
+						target='_blank'
+						rel='noopener noreferrer'
+						key={i}
+						className='max-w-xs p-2 w-full group/card'
 					>
-						<div className='flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] '>
-							<h3 className='max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100'>
-								Setup NextJS with typescript, EsLint, prettier
-								and husky
-							</h3>
-							<div className='text-base !m-0 !p-0 font-normal'>
-								<span className='text-slate-500 '>
-									Customizable EsLint and NextJS.
-								</span>
+						<div
+							className={cn(
+								" cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
+								"bg-[url(/blogs/blog-bg.jpg)] bg-cover"
+							)}
+						>
+							<div className='absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60'></div>
+							<div className='flex flex-row items-center space-x-4 z-10'>
+								<Image
+									height='120'
+									width='120'
+									alt='Avatar'
+									src={blog.img}
+									className='h-10 w-10 rounded-full border-2 object-cover'
+								/>
+								<div className='flex flex-col'>
+									<p className='font-normal text-base text-gray-50 relative z-10'>
+										{blog.author}
+									</p>
+									<p className='text-sm text-gray-400'>
+										2 min read
+									</p>
+								</div>
 							</div>
-							<div className='flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500' />
-						</div>
-					</PinContainer>
-				</div>
-				<div className='h-full py-9 flex items-center justify-center '>
-					<PinContainer
-						title='/dev.to/abhisheksrajput'
-						href='https://dev.to/abhisheksrajput/can-you-solve-these-javascript-mind-twister-puzzles-by-chatgpt-58cf'
-					>
-						<div className='flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] '>
-							<h3 className='max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100'>
-								Can you solve these Javascript Mind Twister
-								Puzzles by ChatGPT?
-							</h3>
-							<div className='text-base !m-0 !p-0 font-normal'>
-								<span className='text-slate-500 '>
-									Solve these puzzles and improve your problem
-									solving skills.
-								</span>
+							<div className='text content'>
+								<h1 className='font-bold text-xl md:text-2xl text-gray-50 relative z-10'>
+									{blog.title}
+								</h1>
+								<p className='font-normal text-sm text-gray-50 relative z-10 my-4'>
+									{blog.des}
+								</p>
 							</div>
-							<div className='flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500' />
 						</div>
-					</PinContainer>
-				</div>
+					</a>
+				))}
 			</div>
 		</section>
 	);

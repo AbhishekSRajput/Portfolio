@@ -4,6 +4,7 @@ import InfiniteScroll from "@/components/InfiniteScroll";
 import Grid from "@/components/Grid";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
+import Blogs from "@/components/Blogs";
 
 const AppPage = () => {
 	return (
@@ -13,6 +14,7 @@ const AppPage = () => {
 			<Grid />
 			<Experience />
 			<Projects />
+			<Blogs />
 		</>
 	);
 };
