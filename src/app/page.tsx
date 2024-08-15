@@ -11,8 +11,8 @@ const AppPage = () => {
 			<Hero />
 			<InfiniteScroll />
 			<Grid />
-			<Projects />
 			<Experience />
+			<Projects />
 		</>
 	);
 };
