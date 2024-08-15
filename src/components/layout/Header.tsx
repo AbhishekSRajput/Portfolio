@@ -28,6 +28,9 @@ const DropDownNavMenu = () => {
 					<a href='#about'>About</a>
 				</DropdownMenuItem>
 				<DropdownMenuItem>
+					<a href='#experience'>Experience</a>
+				</DropdownMenuItem>
+				<DropdownMenuItem>
 					<a href='#projects'>Projects</a>
 				</DropdownMenuItem>
 				<DropdownMenuItem>
@@ -61,6 +64,12 @@ const Navbar = () => {
 								className='hover:text-primary active:text-primary'
 							>
 								About
+							</a>
+							<a
+								href='#experience'
+								className='hover:text-primary active:text-primary'
+							>
+								Experience
 							</a>
 							<a
 								href='#projects'

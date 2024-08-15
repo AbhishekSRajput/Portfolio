@@ -1,83 +1,61 @@
 "use client";
-
-// import { FaLocationArrow } from "react-icons/fa6";
-import { Send } from "lucide-react";
-import { blogs } from "@/data";
-import { PinContainer } from "@/components/3DPin";
-import { TextGenerateEffect } from "../TextGenerateEffect";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { blogs } from "@/data";
+import { TextGenerateEffect } from "../TextGenerateEffect";
 
-const Blogs = () => {
+export default function Blogs() {
 	return (
-		<div id='blogs' className='py-16'>
+		<section className='py-12 px-1 '>
 			<TextGenerateEffect
-				words='My Blogs'
+				words='Blogs'
 				className='text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'
 			/>
-			<div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-10'>
-				{blogs.map((item) => (
-					<div
-						className='lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]'
-						key={item.id}
+			<div className='flex justify-center flex-wrap'>
+				{blogs.map((blog, i) => (
+					<a
+						href={blog.link}
+						target='_blank'
+						rel='noopener noreferrer'
+						key={i}
+						className='max-w-xs p-2 w-full group/card'
 					>
-						<PinContainer title={item.title}>
-							<div className='relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10'>
-								
-							</div>
-
-							<p
-								className='lg:text-xl lg:font-normal font-light text-sm line-clamp-2 dark:text-white text-black'
-								style={{
-									margin: "1vh 0",
-								}}
-							>
-								{item.des}
-							</p>
-
-							<div className='flex items-center justify-between mt-7 mb-3'>
-								<div className='flex items-center'>
-									{item.iconLists.map((icon, index) => (
-										<div
-											key={index}
-											className='border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center'
-											style={{
-												transform: `translateX(-${
-													5 * index + 2
-												}px)`,
-											}}
-										>
-											<img
-												src={icon}
-												alt='icon5'
-												className='p-2'
-											/>
-										</div>
-									))}
+						<div
+							className={cn(
+								" cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
+								"bg-[url(/blogs/blog-bg.jpg)] bg-cover"
+							)}
+						>
+							<div className='absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60'></div>
+							<div className='flex flex-row items-center space-x-4 z-10'>
+								<Image
+									height='120'
+									width='120'
+									alt='Avatar'
+									src={blog.img}
+									className='h-10 w-10 rounded-full border-2 object-cover'
+								/>
+								<div className='flex flex-col'>
+									<p className='font-normal text-base text-gray-50 relative z-10'>
+										{blog.author}
+									</p>
+									<p className='text-sm text-gray-400'>
+										2 min read
+									</p>
 								</div>
-
-								<a
-									className={cn(
-										item.link
-											? ""
-											: "pointer-events-none opacity-20",
-										"flex justify-center items-center"
-									)}
-									href=''
-								>
-									<div className='flex justify-center items-center'>
-										<p className='flex lg:text-xl md:text-xs text-sm text-purple'>
-											Check Live Site
-										</p>
-										<Send className='ms-3' />
-									</div>
-								</a>
 							</div>
-						</PinContainer>
-					</div>
+							<div className='text content'>
+								<h1 className='font-bold text-xl md:text-2xl text-gray-50 relative z-10'>
+									{blog.title}
+								</h1>
+								<p className='font-normal text-sm text-gray-50 relative z-10 my-4'>
+									{blog.des}
+								</p>
+							</div>
+						</div>
+					</a>
 				))}
 			</div>
-		</div>
+		</section>
 	);
-};
-
-export default Blogs;
+}
