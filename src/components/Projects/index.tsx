@@ -1,175 +1,101 @@
-import React from "react";
-import Image from "next/image";
-import vaccinationCenter from "../../../public/projects/vaccinationCenter.png";
-import html5 from "../../../public/techIcons/html5.svg";
-import css3 from "../../../public/techIcons/css3.svg";
-import javascript from "../../../public/techIcons/js.svg";
-import nextjs from "../../../public/techIcons/nextjs2.svg";
-import tailwind from "../../../public/techIcons/tailwindcss.svg";
-import github from "../../../public/techIcons/github.svg";
-import nestjs from "../../../public/techIcons/nestjs.svg";
-import mysql from "../../../public/techIcons/mysql.svg";
-import thakur from "../../../public/projects/thakur.png";
-import { Button } from "../ui/button";
+"use client";
 
-const AgencyLandingPage = () => {
+// import { FaLocationArrow } from "react-icons/fa6";
+import { Send } from "lucide-react";
+import { projects } from "@/data";
+import { PinContainer } from "@/components/3DPin";
+import { TextGenerateEffect } from "../TextGenerateEffect";
+import { cn } from "@/lib/utils";
+
+const RecentProjects = () => {
 	return (
-		<section id='projects' className='mt-7 min-h-screen border pt-16'>
-			<h2 className='p-4 text-4xl lg:text-5xl text-center'>Projects</h2>
-			<div className='container p-7 border mx-auto flex flex-col lg:flex-row justify-center items-center'>
-				<div className='lg:w-1/2 p-7 lg:mb-0'>
-					<h1 className='text-xl md:text-2xl lg:text-3xl mb-4'>
-						Vaccination Center Finder.
-					</h1>
-					<p className='text-gray-300 text-base md:text-sm lg:text-sm mb-6'>
-						Vaccination Center Finder is a web application that
-						helps users to find the nearest vaccination center.
-					</p>
-					<div className='flex flex-wrap space-x-4 mb-6'>
-						<span className='p-2'>
-							<Image
-								src={tailwind}
-								alt='redux'
-								width={34}
-								height={34}
-							/>
-						</span>
-						<span className='p-2'>
-							<Image
-								src={html5}
-								alt='html5'
-								width={34}
-								height={34}
-							/>
-						</span>
-						<span className='p-2'>
-							<Image
-								src={css3}
-								alt='css3'
-								width={34}
-								height={34}
-							/>
-						</span>
-						<span className='p-2'>
-							<Image
-								src={javascript}
-								alt='javascript'
-								width={34}
-								height={34}
-							/>
-						</span>
-						<span className='p-2'>
-							<Image
-								src={nextjs}
-								alt='nextjs'
-								width={34}
-								height={34}
-							/>
-						</span>
+		<div className='py-16'>
+			<TextGenerateEffect
+				words='Recent Projects'
+				className='text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'
+			/>
+			<div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-10'>
+				{projects.map((item) => (
+					<div
+						className='lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]'
+						key={item.id}
+					>
+						<PinContainer title={item.title}>
+							<div className='relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10'>
+								<div
+									className='relative w-full h-full overflow-hidden lg:rounded-3xl'
+									style={{ backgroundColor: "#13162D" }}
+								>
+									<img src='bg.png' alt='bgimg' />
+								</div>
+								<img
+									src={item.img}
+									alt='cover'
+									className='z-10 absolute bottom-0'
+								/>
+							</div>
+
+							<h1 className='font-bold lg:text-2xl md:text-xl text-base line-clamp-1'>
+								{item.title}
+							</h1>
+
+							<p
+								className='lg:text-xl lg:font-normal font-light text-sm line-clamp-2'
+								style={{
+									color: "#BEC1DD",
+									margin: "1vh 0",
+								}}
+							>
+								{item.des}
+							</p>
+
+							<div className='flex items-center justify-between mt-7 mb-3'>
+								<div className='flex items-center'>
+									{item.iconLists.map((icon, index) => (
+										<div
+											key={index}
+											className='border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center'
+											style={{
+												transform: `translateX(-${
+													5 * index + 2
+												}px)`,
+											}}
+										>
+											<img
+												src={icon}
+												alt='icon5'
+												className='p-2'
+											/>
+										</div>
+									))}
+								</div>
+
+								<a
+									className={cn(
+										item.link
+											? ""
+											: "pointer-events-none opacity-20",
+										"flex justify-center items-center"
+									)}
+									href=''
+								>
+									<div className='flex justify-center items-center'>
+										<p className='flex lg:text-xl md:text-xs text-sm text-purple'>
+											Check Live Site
+										</p>
+										<Send
+											className='ms-3'
+											color='#CBACF9'
+										/>
+									</div>
+								</a>
+							</div>
+						</PinContainer>
 					</div>
-					<Button className='space-x-2'>
-						<Image
-							src={github}
-							height={14}
-							width={14}
-							alt='github'
-						/>
-						<a
-							href='https://vaccinationcenter.vercel.app/'
-							target='_blank'
-							rel='noreferrer'
-						>
-							View Live Project
-						</a>
-					</Button>
-				</div>
-				<div className='lg:w-1/2 p-7 h-full'>
-					<Image src={vaccinationCenter} alt='vaccine' />
-				</div>
+				))}
 			</div>
-			<div className='container p-7 border mx-auto flex flex-col lg:flex-row justify-center items-center'>
-				<div className='lg:w-1/2 p-7 lg:mb-0'>
-					<h1 className='text-xl md:text-2xl lg:text-3xl mb-4'>
-						Thakur
-					</h1>
-					<p className='text-gray-300 text-base md:text-sm lg:text-sm mb-6'>
-						Project On Going Where I am working on the project
-						Thakur releasing soon.
-					</p>
-					<div className='flex flex-wrap space-x-4 mb-6'>
-						<span className='p-2'>
-							<Image
-								src={tailwind}
-								alt='redux'
-								width={34}
-								height={34}
-							/>
-						</span>
-						<span className='p-2'>
-							<Image
-								src={html5}
-								alt='html5'
-								width={34}
-								height={34}
-							/>
-						</span>
-						<span className='p-2'>
-							<Image
-								src={css3}
-								alt='css3'
-								width={34}
-								height={34}
-							/>
-						</span>
-						<span className='p-2'>
-							<Image
-								src={javascript}
-								alt='javascript'
-								width={34}
-								height={34}
-							/>
-						</span>
-						<span className='p-2'>
-							<Image
-								src={nextjs}
-								alt='nextjs'
-								width={34}
-								height={34}
-							/>
-						</span>
-						<span className='p-2'>
-							<Image
-								src={nestjs}
-								alt='nestjs'
-								width={34}
-								height={34}
-							/>
-						</span>
-						<span className='p-2'>
-							<Image
-								src={mysql}
-								alt='mysql'
-								width={34}
-								height={34}
-							/>
-						</span>
-					</div>
-					<Button disabled={true} className='space-x-2'>
-						<Image
-							src={github}
-							height={14}
-							width={14}
-							alt='github'
-						/>
-						<span>View Live Project</span>
-					</Button>
-				</div>
-				<div className='lg:w-1/2 p-7 h-full'>
-					<Image src={thakur} alt='vaccine' />
-				</div>
-			</div>
-		</section>
+		</div>
 	);
 };
 
-export default AgencyLandingPage;
+export default RecentProjects;
