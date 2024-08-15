@@ -157,23 +157,23 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    Company: "Punde Software",
-    title: "Shopify Developer",
+    company: "Punde Software",
+    title: "JR Software Engineer",
     from: '2021',
     to: '2022',
     desc: "Developed and maintained user-facing features using modern frontend technologies.",
     className: "md:col-span-2",
-    thumbnail: "exp1.svg",
+    thumbnail: "experience/punde.png",
   },
   {
     id: 2,
     company: "INFILON Technologies",
-    title: "Fullstack Developer",
+    title: "Software Engineer",
     from: '2022',
     to: 'Present',
     desc: "Full stack developer at INFILON Technologies, developing web applications using React and NodeJS.",
     className: "md:col-span-2",
-    thumbnail: "exp2.svg",
+    thumbnail: "experience/infilon-light.png",
   },
 ];
 

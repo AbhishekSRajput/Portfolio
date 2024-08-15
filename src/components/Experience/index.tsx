@@ -6,7 +6,7 @@ import { TextGenerateEffect } from "../TextGenerateEffect";
 
 const Experience = () => {
 	return (
-		<div className='py-20 px-9 w-full'>
+		<div id='experience' className='pt-20 px-9 w-full'>
 			<TextGenerateEffect
 				words='Experience'
 				className='text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'
@@ -28,10 +28,16 @@ const Experience = () => {
 								className='lg:w-32 md:w-20 w-16'
 							/>
 							<div className='lg:ms-5'>
-								<h1 className='text-start text-black dark:text-white text-xl md:text-2xl font-bold'>
+								<h2 className='text-start text-black dark:text-white text-xl md:text-2xl font-bold'>
+									{card.company}
+								</h2>
+								<h3 className='text-start text-gray-500 dark:text-gray-300 mt-3 font-semibold'>
 									{card.title}
-								</h1>
-								<p className='text-start text-gray-300 dark:text-white  mt-3 font-semibold'>
+								</h3>
+								<p className='text-start text-gray-500 dark:text-gray-300 mt-3 font-semibold'>
+									From: {card.from} to {card.to}
+								</p>
+								<p className='text-start text-gray-500 dark:text-gray-300  mt-3 font-semibold'>
 									{card.desc}
 								</p>
 							</div>

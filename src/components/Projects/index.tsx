@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 const RecentProjects = () => {
 	return (
-		<div id='projects' className='py-16'>
+		<div id='projects' className='pt-16'>
 			<TextGenerateEffect
 				words='Recent Projects'
 				className='text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'
