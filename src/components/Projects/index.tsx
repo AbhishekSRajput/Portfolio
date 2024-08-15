@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 const RecentProjects = () => {
 	return (
-		<div className='py-16'>
+		<div id='projects' className='py-16'>
 			<TextGenerateEffect
 				words='Recent Projects'
 				className='text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'
@@ -22,12 +22,6 @@ const RecentProjects = () => {
 					>
 						<PinContainer title={item.title}>
 							<div className='relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10'>
-								<div
-									className='relative w-full h-full overflow-hidden lg:rounded-3xl'
-									style={{ backgroundColor: "#13162D" }}
-								>
-									<img src='bg.png' alt='bgimg' />
-								</div>
 								<img
 									src={item.img}
 									alt='cover'
@@ -40,9 +34,8 @@ const RecentProjects = () => {
 							</h1>
 
 							<p
-								className='lg:text-xl lg:font-normal font-light text-sm line-clamp-2'
+								className='lg:text-xl lg:font-normal font-light text-sm line-clamp-2 dark:text-gray-400 text-gray-600'
 								style={{
-									color: "#BEC1DD",
 									margin: "1vh 0",
 								}}
 							>
@@ -83,10 +76,7 @@ const RecentProjects = () => {
 										<p className='flex lg:text-xl md:text-xs text-sm text-purple'>
 											Check Live Site
 										</p>
-										<Send
-											className='ms-3'
-											color='#CBACF9'
-										/>
+										<Send className='ms-3' />
 									</div>
 								</a>
 							</div>
