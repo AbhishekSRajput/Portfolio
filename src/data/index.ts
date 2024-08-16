@@ -178,6 +178,16 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
+    company: "INFILON Technologies",
+    title: "Software Engineer",
+    from: '2022',
+    to: 'Present',
+    desc: "Full stack developer at INFILON Technologies, developing web applications using React and NodeJS.",
+    className: "md:col-span-2",
+    thumbnail: "experience/infilonLight.png",
+  },
+  {
+    id: 2,
     company: "Punde Software",
     title: "JR Software Engineer",
     from: '2021',
@@ -185,17 +195,7 @@ export const workExperience = [
     desc: "Developed and maintained user-facing features using modern frontend technologies.",
     className: "md:col-span-2",
     thumbnail: "experience/punde.png",
-  },
-  {
-    id: 2,
-    company: "INFILON Technologies",
-    title: "Software Engineer",
-    from: '2022',
-    to: 'Present',
-    desc: "Full stack developer at INFILON Technologies, developing web applications using React and NodeJS.",
-    className: "md:col-span-2",
-    thumbnail: "experience/infilon-light.png",
-  },
+  }
 ];
 
 export const socialMedia = [
