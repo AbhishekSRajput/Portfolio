@@ -1,3 +1,5 @@
+import { time } from "console";
+
 export const navItems = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
@@ -96,6 +98,7 @@ export const blogs = [
     des: "Can you solve these Javascript Mind Twister Puzzles by ChatGPT? 🤯",
     img: "blogs/devto.png",
     iconLists: ["techIcons/js.svg"],
+    time: "9 min read",
     link: "https://dev.to/abhisheksrajput/can-you-solve-these-javascript-mind-twister-puzzles-by-chatgpt-58cf",
   },
   {
@@ -105,6 +108,7 @@ export const blogs = [
     des: "Setup NextJS with typescript, EsLint, prettier and husky",
     img: "blogs/devto.png",
     iconLists: ["next.svg", "ts.svg"],
+    time: "7 min read",
     link: "https://dev.to/abhisheksrajput/can-you-solve-these-javascript-mind-twister-puzzles-by-chatgpt-58cf ",
   }
 ];
