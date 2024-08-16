@@ -1,0 +1,4 @@
+.bgImage {
+  background-image: url('../../../public/blogs/blogBg.jpg');
+  background-size: cover;
+}
