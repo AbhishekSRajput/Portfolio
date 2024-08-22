@@ -5,7 +5,7 @@ import Grid from "@/components/Grid";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Blogs from "@/components/Blogs";
-import LoginForm from "@/components/LoginForm";
+import Review from "@/components/Review";
 
 const AppPage = () => {
 	return (
@@ -16,7 +16,7 @@ const AppPage = () => {
 			<Experience />
 			<Projects />
 			<Blogs />
-			<LoginForm />
+			<Review />
 		</>
 	);
 };

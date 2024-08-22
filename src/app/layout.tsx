@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Layout from "@/components/layout/Layout";
+import ReactQueryProvider from "@/lib/ReactQueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,14 +20,16 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
-				<ThemeProvider
-					attribute='class'
-					defaultTheme='dark'
-					enableSystem
-					disableTransitionOnChange
-				>
-					<Layout>{children}</Layout>
-				</ThemeProvider>
+				<ReactQueryProvider>
+					<ThemeProvider
+						attribute='class'
+						defaultTheme='dark'
+						enableSystem
+						disableTransitionOnChange
+					>
+						<Layout>{children}</Layout>
+					</ThemeProvider>
+				</ReactQueryProvider>
 			</body>
 		</html>
 	);
