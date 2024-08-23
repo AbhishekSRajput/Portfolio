@@ -20,7 +20,7 @@ const Hero = () => {
 				<div className='mt-12 call-to-action flex justify-center items-center flex-col space-y-4 mb-8 sm:flex-row sm:space-x-4 sm:space-y-0'>
 					<Button size='lg' variant='default'>
 						<a
-							href='Resume_Abhishek_Singh.pdf'
+							href='/Abhishek_Singh_Resume.pdf'
 							className='py-2 px-2 text-lg '
 							target='_blank'
 							rel='noopener noreferrer'
