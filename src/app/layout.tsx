@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Layout from "@/components/layout/Layout";
 import ReactQueryProvider from "@/lib/ReactQueryProvider";
+import { ModalProvider } from "@/components/AnimatedModal";
 
 const inter = Inter({ subsets: ["latin"] });
 

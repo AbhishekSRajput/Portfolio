@@ -12,7 +12,30 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  return NextResponse.json({ error: 'Method not allowed' }, { status: 405 });
+  try {
+    const { title, content, userEmail } = await request.json();
+    if (!title || !content || !userEmail) {
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    }
+
+    const newReview = await prisma.review.upsert({
+      where: { userEmail: userEmail },
+      update: {
+        title,
+        content,
+      },
+      create: {
+        title,
+        content,
+        userEmail,
+      },
+    });
+
+    return NextResponse.json({ message: 'Review created successfully', data: newReview }, { status: 201 });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: 'An unexpected error occurred' }, { status: 500 });
+  }
 }
 
 export async function PUT(request: NextRequest) {

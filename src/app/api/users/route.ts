@@ -4,7 +4,6 @@ import prisma from '@/lib/prisma';
 export async function GET(request: NextRequest,) {
   try {
     const email = request.nextUrl.searchParams.get('email');
-    console.log('email-==================----------', email)
     if (!email) {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
     }

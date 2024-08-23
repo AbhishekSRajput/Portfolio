@@ -19,4 +19,14 @@ const fetchData = async (url: string, options: AxiosRequestConfig = {}) => {
   }
 };
 
-export { fetchData };
+const addData = async (url: string, data: any, options: AxiosRequestConfig = {}) => {
+  try {
+    const response = await axiosInstance.post(url, data, options);
+    return response.data;
+  } catch (error) {
+    console.error('Error adding data:', error);
+    throw new Error('Could not add data');
+  }
+};
+
+export { fetchData, addData };
