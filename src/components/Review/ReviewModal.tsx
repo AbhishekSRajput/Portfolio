@@ -20,12 +20,15 @@ interface ReviewPayload {
 	title: string;
 	content: string;
 	userEmail: string;
+	name: string;
 }
 
 export function ReviewModal({ session }: { session: any }) {
 	const queryClient = useQueryClient();
 	const { setOpen } = useModal();
 	const router = useRouter();
+	console.log("loading---", session);
+
 	const [loading, setLoading] = useState(false);
 	const [reviewAdded, setReviewAdded] = useState(false);
 
@@ -60,11 +63,11 @@ export function ReviewModal({ session }: { session: any }) {
 			content: review,
 			title: reviewerRole,
 			userEmail: session.user.email,
+			name: session.user.name,
 		};
 
 		mutation.mutate(payload);
 	};
-	console.log("loading", loading);
 
 	return (
 		<section>

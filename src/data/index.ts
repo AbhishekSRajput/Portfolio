@@ -109,7 +109,7 @@ export const blogs = [
     img: "blogs/devto.png",
     iconLists: ["next.svg", "ts.svg"],
     time: "7 min read",
-    link: "https://dev.to/abhisheksrajput/can-you-solve-these-javascript-mind-twister-puzzles-by-chatgpt-58cf ",
+    link: "https://dev.to/abhisheksrajput/setup-nextjs-with-typescript-eslint-prettier-and-husky-49lb",
   }
 ];
 
