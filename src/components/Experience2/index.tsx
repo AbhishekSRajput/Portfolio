@@ -11,12 +11,11 @@ export function Experience2() {
 					<Image
 						src='/experience/infilonLight.png'
 						alt='infilon company'
-						layout='responsive'
 						width={170}
 						height={170}
 					/>
 					<p className='text-lg'>Software Engineer</p>
-					<ul className='list-disc p-3 space-y-2 pl-5'>
+					<ul className='list-disc p-3 space-y-2 pl-5 text-gray-400 text-sm font-light dark:text-gray-300'>
 						<li>
 							<strong>
 								Developed Responsive Web Applications:
@@ -109,12 +108,12 @@ export function Experience2() {
 					<Image
 						src='/experience/punde.png'
 						alt='punde company'
-						width={270}
-						height={270}
-						layout='responsive'
+						width={170}
+						height={170}
+						className='rounded-sm'
 					/>
 					<p className='text-lg'>Jr. Software Engineer</p>
-					<ul className='list-disc p-3 space-y-2 pl-5'>
+					<ul className='list-disc p-3 space-y-2 pl-5 text-gray-400 text-sm font-light dark:text-gray-300'>
 						<li>
 							<strong>Crafted Innovative Shopify Themes:</strong>{" "}
 							Developed themes for diverse industries, focusing on
