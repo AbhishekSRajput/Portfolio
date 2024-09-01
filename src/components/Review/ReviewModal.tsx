@@ -16,12 +16,7 @@ import { addData } from "@/utils/api";
 import { useRouter } from "next/navigation";
 import { LoadingSpinner } from "../LoadingSpinner";
 
-interface ReviewPayload {
-	title: string;
-	content: string;
-	userEmail: string;
-	name: string;
-}
+
 
 export function ReviewModal({ session }: { session: any }) {
 	const queryClient = useQueryClient();
@@ -36,7 +31,7 @@ export function ReviewModal({ session }: { session: any }) {
 	const [reviewerRole, setReviewerRole] = useState("");
 
 	const mutation = useMutation({
-		mutationFn: async (payload: ReviewPayload) => {
+		mutationFn: async (payload: any) => {
 			setLoading(true);
 			const response = await addData("/api/reviews", payload);
 			return response;
@@ -59,7 +54,7 @@ export function ReviewModal({ session }: { session: any }) {
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
-		const payload: ReviewPayload = {
+		const payload: any = {
 			content: review,
 			title: reviewerRole,
 			userEmail: session.user.email,

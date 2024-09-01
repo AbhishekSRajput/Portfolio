@@ -14,7 +14,6 @@ const InfiniteMovingCardsDemo = () => {
 	const { data, isLoading, isError } = useQuery({
 		queryFn: async () => await getReviews(),
 		queryKey: ["reviews"],
-		staleTime: 1000 * 60 * 60 * 1, // an hour
 	});
 
 	if (isLoading) return <div>Loading...</div>;
@@ -26,7 +25,7 @@ const InfiniteMovingCardsDemo = () => {
 			<InfiniteMovingCards
 				items={data?.data ?? []}
 				direction='right'
-				speed='slow'
+				speed='fast'
 			/>
 		</div>
 	);

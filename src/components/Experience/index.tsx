@@ -6,7 +6,7 @@ import { TextGenerateEffect } from "../TextGenerateEffect";
 
 const Experience = () => {
 	return (
-		<div id='experience' className='pt-20 px-9 w-full'>
+		<div className='pt-20 px-9 w-full'>
 			<TextGenerateEffect
 				words='Experience'
 				className='text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'
