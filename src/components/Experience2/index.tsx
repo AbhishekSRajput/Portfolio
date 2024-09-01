@@ -5,7 +5,7 @@ import { Timeline } from "@/components/Timeline";
 export function Experience2() {
 	const data = [
 		{
-			title: "2024-Present",
+			title: "Mar 2022-Present",
 			content: (
 				<div>
 					<Image
@@ -102,7 +102,7 @@ export function Experience2() {
 			),
 		},
 		{
-			title: "2022 - September",
+			title: "Sep 2021 - Mar 2022",
 			content: (
 				<div>
 					<Image
